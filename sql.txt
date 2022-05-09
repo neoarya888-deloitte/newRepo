@@ -1,0 +1,175 @@
+CREATE TABLE Customer (customer_id INT, 
+					   first_name VARCHAR(20), 
+					   last_name VARCHAR(20), 
+					   email VARCHAR(30),
+					   address VARCHAR(100),
+					   City VARCHAR(20),
+					   State VARCHAR(20),
+					   Zip INT,
+					   primary key(customer_id)
+					   )
+DROP TABLE CUSTOMER
+			
+INSERT INTO Customer 
+
+
+CREATE TABLE SALESMAN (
+							
+					  )
+
+
+
+
+
+
+
+
+
+
+
+
+VALUES (1209276,'Joel','Varghese','JoelVarghese01@gmail.com','23nd Floor, Bhagwati Krupa Bldg,  Police Court Lane, Fort', 
+
+ 'Mumbai','Maharashtra',400001), 
+
+ (101,'Viay','Venkat','VijayVenkat@gmail.com','4262  Gambler Lane','San Jose','California',95106), 
+
+ (102,'Greyson','Gavin','GreysonGavini@gmail.com','2266  Lee Avenue','Camden','New Jersey',08102), 
+
+ (103,'Nagesh','Siva','NageshSiva@gmail.com','1533  Thomas Street','Schaumburg','Illinois',60173), 
+
+ (104,'Graham','Griffin','GrahamGriffin@gmail.com','4678  Oakmound Road','San Jose','California',95101) 
+ 
+ SELECT * FROM CUSTOMER
+ 
+ SELECT * FROM CUSTOMER where first_name like 'G%' and City = 'San Jose'
+ 
+ SELECT COUNT(customer_id) from customer where City = 'Mumbai' 
+ 
+ CREATE TABLE ORDERS (
+ 						ORDER_ID INT NOT NULL PRIMARY KEY,
+ 						ORDER_DATE VARCHAR(20),
+	 					AMOUNT INT,
+	 					CUSTOMER_ID INT
+ 					 )
+					 
+ DROP TABLE ORDERS
+
+INSERT INTO Orders 
+
+VALUES (256,'2015-11-05',350, 101),(257,'2015-11-07',156,105),(258,'2015-11-08',100,007), 
+
+(260,'2015-11-11',500, 104),(261,'2015-11-12',700,003),(262,'2015-11-13',900,102) 
+ 
+ 
+ SELECT * FROM ORDERS
+ 
+SELECT CUST.customer_id, CUST.first_name, CUST.City, ORD.Amount, ORD.Order_id FROM 
+CUSTOMER AS CUST
+INNER JOIN ORDERS AS ORD
+ON CUST.customer_id = ORD.customer_id
+
+SELECT CUST.customer_id, CUST.first_name, CUST.City, ORD.Amount, ORD.Order_id FROM 
+CUSTOMER AS CUST
+left JOIN ORDERS AS ORD
+ON CUST.customer_id = ORD.customer_id
+
+
+
+
+
+
+
+
+
+
+--------exercise--------------
+1.
+SELECT * FROM CUSTOMER where first_name like 'V%' 
+and City = 'Mumbai'
+
+2.
+UPDATE CUSTOMER 
+SET City = 'Nagpur'
+WHERE last_name = 'Venkat'
+
+3.
+delete from ORDERS;
+
+select * from customer
+SELECT * FROM ORDERS
+
+-------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE SALESMAN (
+						SNO INT, 
+						S_NAME VARCHAR(30),
+						START_YEAR INT,
+						DEPTNO VARCHAR(10) NOT NULL PRIMARY KEY
+					  )
+
+CREATE TABLE TRIP (
+						TNO INT, 
+						FROM_CITY VARCHAR(20),
+						TO_CITY VARCHAR(20),
+						DEPARTURE_DATE DATE,
+						RETURN_DATE DATE
+				  )
+				  
+CREATE TABLE DEPT (
+						DEPTNO VARCHAR(10) NOT NULL, 
+						DEPT_NAME CHAR(20)
+				  )				  
+CREATE TABLE EXPENSE (
+						EID INT, 
+						AMOUNT_MONEY INT
+				  )
+SELECT * FROM SALESMAN
+SELECT * FROM TRIP
+SELECT * FROM DEPT
+SELECT * FROM EXPENSE
+DROP TABLE DEPT
+
+INSERT INTO SALESMAN
+
+VALUES (1,'Rocky',2010, '5'),(2,'Rahul',2013,'6')
+ 
+INSERT INTO TRIP
+
+VALUES (8,'Mumbai','Kanpur', '2010-05-06', '2012-06-04'),(9 ,'New Delhi','Jaipur', '2008-02-03', '2009-05-02')
+
+INSERT INTO DEPT
+
+VALUES ('5', 'FINANCE'),('6', 'HR')
+
+INSERT INTO EXPENSE
+
+VALUES (8,'Mumbai','Kanpur', '2010-05-06', '2012-06-04'),(9 ,'New Delhi','Jaipur', '2008-02-03', '2009-05-02')
+
+INSERT INTO EXPENSE
+
+VALUES (3, 9000),(4, 20000)
+
+SELECT * FROM TRIP 
+
+SELECT * FROM TRIP INNER JOIN EXPENSE ON TRIP.TNO = EXPENSE.TNO WHERE AMOUNT>10000
+
+
+
+
+
+
+

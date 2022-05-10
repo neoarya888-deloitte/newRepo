@@ -1,0 +1,23 @@
+--------exercise--------------
+1.
+SELECT * FROM CUSTOMER where first_name like 'V%' 
+and City = 'Mumbai'
+
+2.
+UPDATE CUSTOMER 
+SET City = 'Nagpur'
+WHERE last_name = 'Venkat'
+
+3.
+delete from ORDERS;
+
+select * from customer
+SELECT * FROM ORDERS
+
+-------------------------------
+
+
+
+
+
+
